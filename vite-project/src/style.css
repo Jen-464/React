@@ -1,0 +1,30 @@
+body {
+    background-color: lightpink;
+}
+
+.new-item-form {
+    border: 3px solid red;
+}
+
+.form-row {
+    border: 3px solid green;
+}
+
+#item {
+    background-color: orange;
+    width: 300px;
+}
+
+.new-item-form,
+.form-row {
+    width: 100%;
+}
+
+
+/* <form className="new-item-form">
+<div className="form-row">
+  <label htmlFor="item"></label>
+  <input type="text" id="item"/>
+</div>
+<button className="btn"></button>
+</form> */
