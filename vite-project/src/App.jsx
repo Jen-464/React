@@ -2,6 +2,7 @@ import { useState } from "react"
 import "./style.css"
 
 export default function App() {
+  // [current state , function that helps update state]
   const [newItem, setNewItem] = useState("")
   const [todos, setTodos] = useState([])
 
@@ -18,6 +19,23 @@ export default function App() {
     setNewItem("")
   }
 
+  function toggleTodo(id, completed) {
+    setTodos(currentTodos => {
+      return currentTodos.map(todoItem => {
+        if (todoItem.id === id) {
+          return { ...todoItem, completed }
+        }
+        return todoItem
+      })
+    })
+  }
+
+  function deleteTodo(id) {
+    setTodos(currentTodos => {
+      return currentTodos.filter(todoItem => todoItem.id !== id)
+    })
+  }
+
   return (
     <>
       <form onSubmit={handleSubmit} className="new-item-form">
@@ -29,14 +47,17 @@ export default function App() {
       </form>
       <h1 className="header"> To Do List </h1>
       <ul className="list">
+        {/* short circuit with && - if true, run command after && */}
+        {todos.length == 0 && "No Todos"}
         {todos.map(todoItem => {
           return (
             <li key={todoItem.id}>
               <label>
-                <input type="checkbox" checked={todoItem.completed} />
+                <input type="checkbox" checked={todoItem.completed}
+                  onChange={e => toggleTodo(todoItem.id, e.target.checked)} />
                 {todoItem.title}
               </label>
-              <button className="btn btn-danger"> Delete </button>
+              <button onClick={e => deleteTodo(todoItem.id)} className="btn btn-danger"> Delete </button>
             </li>
           )
         })}
