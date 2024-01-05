@@ -41,4 +41,4 @@ Deleted: assets & public folder and css files
 - <></> called ankle brackets
 - useState helps page be interactive instead of static
 - useState takes in a default value
-left at [30:27](https://youtu.be/Rh3tobg7hEo?si=uY5HGwJUfTbYbz0i&t=1828)
+left at [39](https://youtu.be/Rh3tobg7hEo?si=j-KnH5iOhRpEFx-s&t=2341)
