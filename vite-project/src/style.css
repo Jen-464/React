@@ -20,11 +20,6 @@ body {
     width: 100%;
 }
 
-
-/* <form className="new-item-form">
-<div className="form-row">
-  <label htmlFor="item"></label>
-  <input type="text" id="item"/>
-</div>
-<button className="btn"></button>
-</form> */
+.list li:has(input:checked) label {
+    color: hsl(200, 20%, 40%);
+  }
