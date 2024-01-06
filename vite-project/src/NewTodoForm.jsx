@@ -1,5 +1,6 @@
 import { useState } from "react"
 import PropTypes from 'prop-types';
+// import { ReactComponent as iconCheck } from "../assets/icon-check.svg";
 
 export default function NewTodoForm({ onSubmit }) {
   // [current state , function that helps update state]
@@ -13,11 +14,14 @@ export default function NewTodoForm({ onSubmit }) {
 
   return (
     <form onSubmit={handleSubmit} className="new-item-form">
-      <div className="form-row">
-        <label htmlFor="item"> New Item </label>
-        <input value={newItem} onChange={e => setNewItem(e.target.value)} type="text" id="item" />
+      <div className="title">
+        <h1>TODO</h1>
+        <img className="modeSwitch" src="../assets/icon-sun.svg" alt="icon of a sun" />
       </div>
-      <button className="btn"> Add </button>
+      <div className="form-row">
+        <input value={newItem} onChange={e => setNewItem(e.target.value)} type="text" id="item" />
+        <button className="btn"> Add </button>
+      </div>
     </form>
   )
 }
