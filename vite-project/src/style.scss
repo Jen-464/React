@@ -1,0 +1,73 @@
+:root {
+    // Primary
+    --bright-blue: hsl(220, 98%, 61%);
+    --check-background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+
+    // Light Theme
+    --very-light-gray: hsl(0, 0%, 98%);
+    --very-light-grayish-blue: hsl(236, 33%, 92%);
+    --light-grayish-blue: hsl(233, 11%, 84%);
+    --dark-grayish-blue: hsl(236, 9%, 61%);
+    --very-dark-grayish-blue: hsl(235, 19%, 35%);
+
+    // Dark Theme
+    --very-dark-blue: hsl(235, 21%, 11%);
+    --very-dark-desaturate-blue: hsl(235, 24%, 19%);
+    --light-grayish-blue: hsl(234, 39%, 85%);
+    --light-grayish-blue-hover: hsl(236, 33%, 92%);
+    --dark-grayish-blue: hsl(234, 11%, 52%);
+    --very-dark-grayish-blue: hsl(233, 14%, 35%);
+    --very-dark-grayish-blue: hsl(237, 14%, 26%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+    background-color: var(--very-dark-blue);
+}
+
+header {
+    background-image: url("../assets/bg-mobile-dark.jpg");
+    height: 30vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main {
+    position: relative;
+    width: 100%;
+}
+
+form {
+    border: 3px solid orange;
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    padding: 0 24px;
+
+    .title {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 32px;
+    }
+
+    .form-row {
+        background-color: rgba(255, 255, 0, 0.491);
+    }
+}
+
+h1 {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
