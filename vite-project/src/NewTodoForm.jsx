@@ -1,6 +1,6 @@
 import { useState } from "react"
 import PropTypes from 'prop-types';
-// import { ReactComponent as iconCheck } from "../assets/icon-check.svg";
+import CircleCheck from "./CircleCheck";
 
 export default function NewTodoForm({ onSubmit }) {
   // [current state , function that helps update state]
@@ -19,8 +19,9 @@ export default function NewTodoForm({ onSubmit }) {
         <img className="modeSwitch" src="../assets/icon-sun.svg" alt="icon of a sun" />
       </div>
       <div className="form-row">
-        <input value={newItem} onChange={e => setNewItem(e.target.value)} type="text" id="item" />
-        <button className="btn"> Add </button>
+        <input value={newItem} onChange={e => setNewItem(e.target.value)} type="text" id="item" placeholder="Create a new todo..." />
+        <CircleCheck />
+        {/* <button className="btn"> Add </button> */}
       </div>
     </form>
   )
