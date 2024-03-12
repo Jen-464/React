@@ -33,6 +33,7 @@
 
 body {
     background-color: var(--dark-very-dark-blue);
+    color: var(--light-white);
 }
 
 header {
@@ -74,7 +75,7 @@ form {
             background-color: var(--dark-dark-desaturate-blue);
             border-radius: 5px;
             border: none;
-            padding-left: 50px;
+            padding-left: 45px;
         }
 
         input:focus {
@@ -94,21 +95,65 @@ form {
 }
 
 h1 {
-    color: white;
     font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 10px;
 }
 
-input {
+input, #todoItem{
     font-size: 0.6rem;
-    color: var(--dark-light-grayish-blue);
+    color: var(--light-white);
 }
 
 ul {
-    border: 3px solid blue;
     position: absolute;
     width: 100%;
-    top: 140px;
-    padding: 0 20px;
+    top: 170px;
+    padding: 0 24px;
+    list-style-type: none;
+
+    li:first-child {
+        border-radius: 5px 5px 0 0;
+
+    }
+
+    li:last-child {
+        border-radius: 0 0 5px 5px;
+    }
+
+    li {
+        position: relative;
+        height: 48px;
+        background-color: var(--dark-dark-desaturate-blue);
+        border-bottom: 1px solid var(--dark-very-dark-grayish-blue-1);
+
+        input[type="checkbox"] {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            border: 1px solid var(--dark-very-dark-grayish-blue-1);
+            height: 20px;
+            width: 20px;
+            border-radius: 100%;
+            margin: 14px 0 0 14px;
+        }     
+        
+        input[type="checkbox"]:checked {
+            border: 3px solid red;
+        }
+
+        #todoItem {
+            position: absolute;
+            padding: 18.75px 0 0 11px;
+            max-width: 70%;
+        }
+        
+        img {
+            position: absolute;
+            right: 14px;
+            top: 14px;
+            cursor: pointer;
+        }
+    }
+
 }
